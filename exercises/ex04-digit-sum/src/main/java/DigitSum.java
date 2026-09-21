@@ -22,6 +22,15 @@ public class DigitSum {
      */
     public static int digitSum(int n) {
         // TODO: complete
-        return 0;
+        int result = 0;
+        n = Math.abs(n);
+        while (n > 0) {
+            while (n % 10 != 0) {
+                result++;
+                n--;
+            }
+            n = n / 10;
+        }
+        return result;
     }
 }
